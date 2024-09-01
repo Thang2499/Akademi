@@ -1,7 +1,7 @@
 import React from 'react'
 import '../App.css'
-import vector from '../img/Vector.png'
-import card from '../img/Cart1.png'
+import Wishlist from '../img/Wishlist.svg'
+import card from '../img/Cart1.svg'
 import lookup from '../img/lookup.png'
 const Header = () => {
     return (
@@ -10,7 +10,7 @@ const Header = () => {
                 <h1>Exclusive</h1>
             </div>
             <div className=' w-1/5  pt-2 '>
-                <ul className=' list-none flex justify-between '>
+                <ul className=' list-none flex justify-between cursor-pointer  '>
                     <li className='li-hover'>Home</li>
                     <li className='li-hover'>Contact</li>
                     <li className='li-hover'>About</li>
@@ -24,8 +24,8 @@ const Header = () => {
                     </span>
                     <input className="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Search for anything..." type="text" name="search" />
                 </label>
-                <img className='w-5 h-6 pt-1' src={vector} alt="" />
-                <img className='w-7 h-7' src={card} alt="" />
+                <img className='w-9 h-9 cursor-pointer ' src={Wishlist} alt="" />
+                <img className='w-7 h-7 mt-1 cursor-pointer ' src={card} alt="" />
             </div>
 
         </div>

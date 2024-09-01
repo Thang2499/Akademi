@@ -18,7 +18,7 @@ const Categories = () => {
                     <div className='font-semibold text-3xl mt-5'>Browse By Category</div>
                 </div>
             </div>
-            <div className='flex ml-24 mt-8 mr-24 justify-around border-b-2 pb-24'>
+            <div className='flex ml-24 mt-8 mr-24 justify-around border-b-2 pb-24 cursor-pointer '>
                 <div className='w-44 text-center border-solid border-2 h-36 pt-8 category '>
                     <img className='h-20 w-32 pl-12 bg-none' src={smartphone} alt="" />
                     <p>Phones</p>

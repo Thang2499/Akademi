@@ -31,14 +31,14 @@ const Flashsale = () => {
     return (
         <>
             <div className='ml-32 mt-32 w-4/5'>
-                <div></div>
+                
                 <div className='flex'>
                     <div className='w-5 h-10 general-color-red rounded'></div>
                     <p className='red-text ml-4 pt-2 font-semibold'>Today's</p>
                 </div>
                 <div className='flex gap-x-10'>
                     <div className='font-semibold text-3xl mt-5'>Flash Sales</div>
-                    <div className='flex gap-4 '>
+                    <div className='flex gap-4 mt-5'>
                         <div className=' flex flex-col'>
                             <span className='text-xs'>Days</span>
                             <span className='text-4xl font-mono'>03</span>
@@ -80,7 +80,7 @@ const Flashsale = () => {
                 </div>
             </div>
             <div className='flex justify-around mt-12'>
-                <div className='text-center general-color-red text-white w-44 pt-2 pb-2 rounded hover-bt'>View All Products</div>
+                <div className='text-center general-color-red text-white w-44 pt-2 pb-2 rounded hover-bt cursor-pointer '>View All Products</div>
             </div>
         </>
     )

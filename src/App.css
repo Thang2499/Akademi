@@ -39,3 +39,6 @@
 .width-cate{
   width: 85%;
 }
+.filter-white {
+  filter: invert(1);
+}

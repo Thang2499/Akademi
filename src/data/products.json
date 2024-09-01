@@ -100,7 +100,7 @@
         "salePrice" : null,
         "price" : "100",
         "discount": null,
-        "image" : "table"
+        "image" : "dogfood"
     },
     {
         "id":"14",
@@ -108,7 +108,7 @@
         "salePrice" : null,
         "price" : "360",
         "discount": null,
-        "image" : "table"
+        "image" : "camera"
     },
     {
         "id":"15",
@@ -116,7 +116,7 @@
         "salePrice" : null,
         "price" : "700",
         "discount": null,
-        "image" : "table"
+        "image" : "laptop"
     },
     {
         "id":"16",
@@ -124,7 +124,7 @@
         "salePrice" : null,
         "price" : "500",
         "discount": null,
-        "image" : "table"
+        "image" : "cleanser"
     },
     {
         "id":"17",
@@ -132,7 +132,7 @@
         "salePrice" : null,
         "price" : "960",
         "discount": null,
-        "image" : "table"
+        "image" : "CarKids"
     },
     {
         "id":"18",
@@ -140,7 +140,7 @@
         "salePrice" : null,
         "price" : "1160",
         "discount": null,
-        "image" : "table"
+        "image" : "soccershoes"
     },
     {
         "id":"19",
@@ -148,7 +148,7 @@
         "salePrice" : null,
         "price" : "660",
         "discount": null,
-        "image" : "table"
+        "image" : "controller"
     },
     {
         "id":"20",
@@ -156,7 +156,7 @@
         "salePrice" : null,
         "price" : "660",
         "discount": null,
-        "image" : "table"
+        "image" : "jacket"
     }
 
 ]

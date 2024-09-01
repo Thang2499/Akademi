@@ -7,6 +7,7 @@ import context from './Context/context'
 import { useState } from 'react'
 import { Routes, Route } from 'react-router-dom';
 import Body from './Home/Body'
+import Footer from './Home/Footer'
 function App() {
   const [product, setProduct] = useState(products)
   return (
@@ -18,6 +19,7 @@ function App() {
           <Routes>
             <Route path='/' element={<Body/>}></Route>
           </Routes>
+          <Footer/>
         </div>
       </context.Provider>
     </>

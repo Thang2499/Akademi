@@ -4,6 +4,7 @@ import Flashsale from './Flashsale'
 import Categories from './Categories'
 import BestSaleProducts from './BestSaleProducts'
 import ExploreOurProducts from './ExploreOurProducts'
+import Featured from './Featured'
 
 const Body = () => {
   return (
@@ -13,6 +14,7 @@ const Body = () => {
     <Categories/>
     <BestSaleProducts/>
     <ExploreOurProducts/>
+    <Featured/>
     </>
   )
 }

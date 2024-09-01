@@ -4,7 +4,7 @@ import Flashsale from './Flashsale'
 const NavPage = () => {
   return (
     <div className='flex mt-8 br '>
-        <div className=' ml-32 w-1/6 bl pt-10'>
+        <div className=' ml-32 w-1/6 bl pt-10 cursor-pointer '>
             <ul className='leading-10  w-32'>
                 <li className='li-hover' >Woman’s Fashion</li>
                 <li className='li-hover w-28' >Men’s Fashion</li>

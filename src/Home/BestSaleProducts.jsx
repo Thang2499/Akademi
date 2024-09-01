@@ -9,7 +9,6 @@ import loudspeaker from '../img/bestselling/Frame694.png'
 const BestSaleProducts = () => {
   const products = useContext(context);
   const filteredProducts = products.product.filter(item => item.discount === null && item.salePrice !== null);
-  console.log(filteredProducts)
   const images = {
     "bag": bag,
     "gammaxx": gammaxx,
@@ -26,7 +25,7 @@ const BestSaleProducts = () => {
         <div className='font-semibold text-3xl mt-5'>Best Selling Products</div>
 
         <div className='float-right pl-44 ml-96 pt-2'>
-          <div className='text-center general-color-red text-white w-44 pt-2 pb-2 rounded hover-bt'>View All</div>
+          <div className='text-center general-color-red text-white w-44 pt-2 pb-2 rounded hover-bt cursor-pointer '>View All</div>
         </div>
       </div>
       <div className='flex justify-between mt-12'>
