@@ -9,7 +9,7 @@ import IconTwitter from '../img/footer/IconTwitter.svg'
 import QrCode from '../img/footer/QrCode.png'
 const Footer = () => {
     return (
-        <div className='flex justify-around bg-black text-white h-80 mt-20'>
+        <div className='flex justify-around bg-black text-white h-80 '>
             <div className='text-sm pt-16 leading-10'>
                 <h4 className='text-2xl font-bold'>Exclusive</h4>
                 <p>Subscribe</p>

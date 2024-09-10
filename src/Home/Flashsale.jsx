@@ -2,20 +2,12 @@ import React, { useContext, useState } from 'react'
 import '../App.css'
 import context from '../Context/context'
 import Flashsaleitems from '../componentChild/Flashsaleitems'
-import chair from '../img/chair.png'
-import controller from '../img/controller.png'
-import screen from '../img/screen.png'
-import keyboard from '../img/keyboard.png'
+import productData from '../data/products'
 const Flashsale = () => {
-    const products = useContext(context)
+
     const [currentIndex, setCurrentIndex] = useState(0);
-    const filteredProducts = products.product.filter(item => item.discount !== null)
-    const images = {
-        "chair": chair,
-        "controller": controller,
-        "screen": screen,
-        "keyboard": keyboard
-    }
+    const filteredProducts = productData.getProducts(8)
+
     const handleNext = () => {
         if (currentIndex < filteredProducts.length - 5) {
             setCurrentIndex(currentIndex + 1);
@@ -73,7 +65,7 @@ const Flashsale = () => {
                     >
                         {filteredProducts.map((item) => (
                             <div key={item.id} className=' ml-12'>
-                                <Flashsaleitems items={{ ...item, image: images[item.image] }} />
+                                <Flashsaleitems item={item} />
                             </div>
                         ))}
                     </div>

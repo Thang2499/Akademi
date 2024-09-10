@@ -42,3 +42,6 @@
 .filter-white {
   filter: invert(1);
 }
+.heigh-productDetail{
+  height: 500px;
+}

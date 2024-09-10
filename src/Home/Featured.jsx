@@ -8,7 +8,7 @@ import custumer from '../img/Feature/custumer.png'
 import protect from '../img/Feature/protect.png'
 const Featured = () => {
     return (
-        <div className='ml-28 mt-20 width-cate border-t-2 '>
+        <div className='ml-28 mt-20 width-cate border-t-2 pb-28 '>
             <div className='flex mt-8'>
                 <div className='w-5 h-10 general-color-red rounded'></div>
                 <p className='red-text ml-4 pt-2 font-semibold'>Featured</p>
