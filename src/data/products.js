@@ -206,8 +206,42 @@ const getProducts = (count) => {
     return products.slice(start, start + count)
 }
 
+const bestSaleProduct =  [
+    products[8],
+    products[9],
+    products[10],
+    products[11]
+]
+const flashSaleProduct = [
+    products[0],
+    products[1],
+    products[2],
+    products[3],
+    products[4],
+    products[5],
+    products[6],
+    products[7]
+]
+ const ExploreItems = [
+     products[11],
+     products[10],
+    products[12],
+    products[13],
+    products[14],
+    products[15],
+    products[16],
+    products[17]
+ ]
+ const fetchProductById = (productId) => {
+    const productDetail = productData.products.find((product) => product.id === productId);
+return productDetail
+   };
 const productData = { 
     getProducts,
-    products
+    products,
+    bestSaleProduct,
+    flashSaleProduct,
+    ExploreItems,
+    fetchProductById
 }
 export default productData;

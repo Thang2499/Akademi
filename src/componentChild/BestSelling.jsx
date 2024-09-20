@@ -1,14 +1,38 @@
-import React, { useState,useContext } from 'react'
+import React, { useState,useContext,useEffect } from 'react'
 import QuickView from '../img/Quick View.svg'
 import Wishlist from '../img/Wishlist.svg'
 import context from '../Context/context'
+import { Link } from 'react-router-dom'
 const BestSelling = ({ items }) => {
-  const { productName, salePrice, price, image } = items
+  const { id,productName, salePrice, price, image} = items
   const [isWishlistActive, setIsWishlistActive] = useState(false);
-  
+  const { favorites, toggleWishlist, setFavorites,setproductDetail } = useContext(context)
   const [quantity, setQuantity] = useState(1)
-  const { productDetail, orderTemplate, setOrderTemplate } = useContext(context)
+  const {setOrderTemplate } = useContext(context)
 
+  useEffect(() => {
+    const storedFavorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    const isFavorited = storedFavorites.some((favItem) => favItem.id === id);
+    if (isFavorited) {
+      setIsWishlistActive(true);
+    }
+  }, [id]);
+
+  const addToWishList = (item) => {
+    setIsWishlistActive(!isWishlistActive);
+    toggleWishlist(item)
+  }
+
+  const removeFromWishList = (id) => {
+    setIsWishlistActive(!isWishlistActive);
+    const updatedFavorites = favorites.filter(i => i.id !== id);
+    setFavorites(updatedFavorites);
+  }
+
+ 
+ const getProductDetail = (item) =>{
+  setproductDetail(item)
+ }
 
   const addToCart = (item) => {
       const product = {
@@ -37,30 +61,25 @@ const BestSelling = ({ items }) => {
               };
           }
       });
-  
       // alert('Sản phẩm đã được thêm vào giỏ hàng!');
   };
 
-  const toggleWishlist = () => {
-    setIsWishlistActive(!isWishlistActive);
-  };
   return (
     <div className='flex flex-col w-68 ml-4 relative group'>
       <div className='grey-bg h-56 w-56'>
         <img className=' w-24 h-48 ml-16 pt-12 pb-5' src={image} alt="" />
       </div>
-      <div className='font-medium'>{productName}</div>
+      <Link to={`/productDetail/${id}`}> <div className='font-medium'>{productName}</div></Link>
       <div className='flex'>
         <span className='red-text font-sans font-medium'>${salePrice}</span>
         {price == "" ?"" :<span className='ml-5 font-sans grey-text line-through'>${price}</span> }
       </div>
       <img className='absolute bg-white right-2 top-10 p-1 rounded-2xl' src={QuickView} alt="" />
       <img
-        className={` absolute bg-white right-2 top-1  rounded-xl  cursor-pointer ${isWishlistActive ? 'bg-teal-500 filter-white' : 'bg-white'
-          }`}
+        className={` absolute  right-2 top-1 rounded-xl  cursor-pointer ${isWishlistActive || favorites.includes(id) ? 'bg-cyan-400 filter-white' : 'bg-white'}`}
         src={Wishlist}
         alt="Wishlist"
-        onClick={toggleWishlist}
+        onClick={() => isWishlistActive ? removeFromWishList(id) : addToWishList(items)}
       />
       <button
       onClick={()=>addToCart(items)}

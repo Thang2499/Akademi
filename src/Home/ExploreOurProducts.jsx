@@ -3,15 +3,6 @@ import context from '../Context/context'
 import ExploreItems from '../componentChild/ExploreItems';
 import productData from '../data/products'
 const ExploreOurProducts = () => {
-  const productsList = useContext(context);
-  const [products, setProducts] = useState([]);
-
-  // useEffect(() => {
-  //   const exploreItems = productsList.product.filter(item => item.salePrice == null)
-  //   setProducts(exploreItems)
-  // }, [])
-
-
   return (
     <div className='ml-28 mt-20 width-cate border-t-2'>
       <div className='flex mt-8'>
@@ -24,7 +15,7 @@ const ExploreOurProducts = () => {
       {
         <div className='grid grid-cols-4 gap-5 mt-8'>
           {
-            productData.getProducts(8).map(item => <ExploreItems key={item.id} item={item}/>)
+            productData.ExploreItems.map((item) => <div key={item.id}> <ExploreItems item={item}/></div>)
           }
         </div>
       }

@@ -3,7 +3,11 @@ import context from '../Context/context'
 import FavoritesItem from '../componentChild/FavoritesItem'
 
 const WishListPage = () => {
-  const { favorites } = useContext(context)
+  const { favorites,setFavorites } = useContext(context)
+  const delateItemFromwishList = (item)=>{{
+     const deleteItemWishLish = favorites.filter(id => id.id !== item.id )
+     setFavorites(deleteItemWishLish)
+  }}
   return (
     <>
       {favorites.length > 0 ?
@@ -14,7 +18,7 @@ const WishListPage = () => {
         <button className='border-2 px-6 py-2'>Move All To Bag</button>
       </div>
         <div className='grid grid-cols-5 gap-y-10 mt-12 ml-24 ' >
-          {favorites.map(item => <div className='' key={item.id}> <FavoritesItem item={item} /></div>)}
+          {favorites.map(item => <div className='' key={item.id}> <FavoritesItem item={item} delateItemFromwishList={delateItemFromwishList} /></div>)}
         </div>
       </div>
         :

@@ -3,10 +3,16 @@ import context from '../Context/context'
 import BestSelling from '../componentChild/BestSelling';
 import loudspeaker from '../img/bestselling/Frame694.png'
 import productData from '../data/products'
+import '../App.css'
 const BestSaleProducts = () => {
   const products = useContext(context);
-  // const filteredProducts = products.product.filter(item => item.discount === null && item.salePrice !== null);
 
+  // const filteredProducts = products.product.filter(item => item.discount === null && item.salePrice !== null);
+  // const api = fetch("https://onlineshop-20b1e-default-rtdb.firebaseio.com/product.json").then(async res => {
+  //   var response = await res.json();
+  //   var product = new ProductDTO(response);
+  //   console.log(response.);
+  // })
   return (
     <div className='ml-28 mt-20 width-cate  '>
       <div className='flex'>
@@ -22,7 +28,7 @@ const BestSaleProducts = () => {
       </div>
       <div className='flex justify-between mt-12'>
         {
-          productData.getProducts(4).map(items => <BestSelling key={items.id} items={items} />)
+          productData.bestSaleProduct.map(item => <BestSelling key={item.id} items={item} />)
         }
     
         </div>
